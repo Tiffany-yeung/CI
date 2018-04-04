@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Please enter the first number:"
+read inputNumber1
+echo "Please enter the second number:"
+read inputNumber2
+
+value=$(($inputNumber1 + $inputNumber2))
+
+if [ $((inputNumber1%2)) -eq 0 ]
+then
+echo "Even number"
+
+else
+echo "Odd number"
+
+fi

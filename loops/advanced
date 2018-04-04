@@ -1,0 +1,36 @@
+#!/bin/bash
+
+
+i=1
+for i in 30
+do
+
+if [ $((i%3)) -eq 0 ] 
+then
+echo "Fizz!"
+
+
+elif [ $((i%5)) -eq 0 ] 
+then
+echo "Buzz!"
+
+
+else 
+echo "${looper}"
+
+fi
+((looper++))
+
+done
+
+
+
+#for i in 10
+#do
+#for j in 10
+#do
+#echo $[{1..10}*{1..10}] | xargs -n10 | column -t
+#done
+#done
+
+

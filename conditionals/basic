@@ -1,0 +1,11 @@
+echo "Please enter a number:"
+
+read inputNumber
+
+if ((${inputNumber}%2==0)); then
+echo "Even number"
+
+elif ((${inputNumber}%2==1)); then
+echo "Odd number"
+
+fi

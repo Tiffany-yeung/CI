@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Enter your value:"
+read value
+
+looper=1
+echo "Start the loop"
+echo "--------------"
+
+while [ $looper -le $value ]
+do
+echo "${looper}"
+((looper++))
+done
+echo "--------------"
+
