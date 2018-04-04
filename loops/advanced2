@@ -1,0 +1,32 @@
+#!/bin/bash
+
+echo "Please enter a number:"
+
+read inputNumber
+
+declare -a numbers=({1.."${inputNumber}")
+
+counter=1
+
+for i in "${numbers[@]}"
+do
+
+if [ $((i%3)) -eq 0 ] && [ $((i%5)) -eq 0 ]
+then
+echo "FizzBuzz!"
+
+elif [ $((i%3)) -eq 0 ]
+then
+echo "Fizz!"
+
+elif [ $((i%5)) -eq 0 ]
+then
+echo "Buzz!"
+
+else
+echo "${i}"
+((counter++))
+fi
+
+done
+

@@ -1,27 +1,52 @@
 #!/bin/bash
 
+declare -a numbers=({1..30})
 
-i=1
-for i in 30
+counter=1
+
+for i in "${numbers[@]}"
 do
 
-if [ $((i%3)) -eq 0 ] 
+if [ $((i%3)) -eq 0 ] && [ $((i%5)) -eq 0 ]
+then
+echo "FizzBuzz!"
+
+elif [ $((i%3)) -eq 0 ]
 then
 echo "Fizz!"
 
-
-elif [ $((i%5)) -eq 0 ] 
+elif [ $((i%5)) -eq 0 ]
 then
 echo "Buzz!"
 
-
-else 
-echo "${looper}"
-
+else
+echo "${i}"
+((counter++))
 fi
-((looper++))
 
 done
+
+#i=1
+#for i in 30
+#do
+
+#if [ $((i%3)) -eq 0 ] 
+#then
+#echo "Fizz!"
+
+
+#elif [ $((i%5)) -eq 0 ] 
+#then
+#echo "Buzz!"
+
+
+#else 
+#echo "${looper}"
+
+#fi
+#((looper++))
+
+#done
 
 
 
