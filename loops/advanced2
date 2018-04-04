@@ -4,11 +4,9 @@ echo "Please enter a number:"
 
 read inputNumber
 
-declare -a numbers=({1.."${inputNumber}")
-
 counter=1
 
-for i in "${numbers[@]}"
+for (( i=1;i<=$inputNumber;i++))
 do
 
 if [ $((i%3)) -eq 0 ] && [ $((i%5)) -eq 0 ]
@@ -25,7 +23,6 @@ echo "Buzz!"
 
 else
 echo "${i}"
-((counter++))
 fi
 
 done
