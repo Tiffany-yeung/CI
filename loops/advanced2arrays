@@ -1,0 +1,32 @@
+
+# not working
+
+#!/bin/bash
+echo "Enter a number:"
+read inputNumber
+arrayNums=()
+for (( number=1; number<=$inputNumber; number++ ))
+do
+arrayNums+=($Number)
+done
+
+for i in "${arrayNums[@]}"
+do
+
+if [ $((i%3)) -eq 0 ] && [ $((i%5)) -eq 0 ]
+then
+echo "FizzBuzz!"
+
+elif [ $((i%3)) -eq 0 ]
+then
+echo "Fizz!"
+
+elif [ $((i%5)) -eq 0 ]
+then
+echo "Buzz!"
+
+else
+echo "${i}"
+fi
+
+done
